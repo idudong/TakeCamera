@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZdG-N8-eCC">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--Demo Collection View Controller-->
+        <scene sceneID="idT-OV-6Ko">
+            <objects>
+                <collectionViewController id="IEX-jm-XfJ" customClass="DemoCollectionViewController" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" id="mBu-vS-NJY">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="2Cv-p6-h80">
+                            <size key="itemSize" width="600" height="535"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells/>
+                        <connections>
+                            <outlet property="dataSource" destination="IEX-jm-XfJ" id="MfI-Cy-Vc7"/>
+                            <outlet property="delegate" destination="IEX-jm-XfJ" id="xfJ-vh-r6Y"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="sUO-Aj-uCS"/>
+                    <connections>
+                        <outlet property="flowLayout" destination="2Cv-p6-h80" id="Ci7-1x-v5W"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HP6-hU-hKG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="992" y="457"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Kdz-25-gcO">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZdG-N8-eCC" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qQ4-Sm-EvF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="IEX-jm-XfJ" kind="relationship" relationship="rootViewController" id="oGc-oj-azR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A13-t4-ola" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="348" y="457"/>
+        </scene>
+    </scenes>
+</document>
